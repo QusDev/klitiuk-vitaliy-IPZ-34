@@ -20,6 +20,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.2;
+  letter-spacing: 0.03em;
 
   span {
     color: var(--color-emphasis);
@@ -36,6 +37,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 
 .header-menu {
@@ -73,6 +75,7 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.35;
+  letter-spacing: 0.06em;
 }
 
 .main-header-request-button {
@@ -84,9 +87,12 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
+  letter-spacing: 0.06em;
 }
 
 .main-features-container {
+  letter-spacing: 0.03em;
+
   ul li h3 {
     font-weight: 700;
     font-size: 14px;
@@ -105,11 +111,13 @@ body {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
+    letter-spacing: 0.03em;
   }
 }
 
 .main-team-container {
   background-color: var(--color-background-light);
+  letter-spacing: 0.03em;
 
   h2 {
     font-weight: 700;
@@ -133,34 +141,44 @@ body {
 /* portfolio.html */
 
 .main-filters-container {
-  font-weight: 500;
+  li {
+    list-style-type: none;
+  }
 
-  ul li button{
+  li button {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.6;
     border: none;
     background-color: var(--color-background-light);
     color: var(--color-primary-dark);
+    font-weight: 500;
+    letter-spacing: 0.03em;
   }
 
-  ul li button:hover {
+  li button:hover {
     background-color: var(--color-emphasis);
     color: var(--color-primary-light);
   }
 }
 
 .main-projects-container {
-  ul li div h3 {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2.0;
+  li {
+    list-style-type: none;
   }
 
-  ul li div p {
+  li div h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  li div p {
     font-size: 16px;
     line-height: 1.85;
     color: var(--color-minor);
+    letter-spacing: 0.03em;
   }
 }
 
@@ -178,11 +196,18 @@ body {
 .footer-address-container {
   font-style: normal;
 
+  p {
+    font-size: 14px;
+    color: var(--color-primary-light);
+    letter-spacing: 0.03em;
+  }
+
   a {
     text-decoration: none;
     color: var(--color-background-light);
     opacity: 0.6;
     font-size: 14px;
     line-height: 1.15;
+    letter-spacing: 0.03em;
   }
 }
