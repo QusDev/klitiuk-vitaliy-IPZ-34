@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+@import '/node_modules/modern-normalize/modern-normalize.css';
 
 :root {
   --color-primary-dark: #212121;
@@ -7,11 +8,36 @@
   --color-background-dark: #2f303a;
   --color-background-light: #f5f4fa;
   --color-emphasis: #2196f3;
+  --color-emphasis-minor: #188ce8;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: var(--color-primary-dark);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logotype {
@@ -27,6 +53,19 @@ body {
   }
 }
 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* header */
 
 .header .logotype {
@@ -34,18 +73,31 @@ body {
 }
 
 .header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  /* height: 80px; */
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ececec;
 }
 
-.header-menu {
-  list-style-type: none;
+.header .container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.header-nav-ul {
+  display: flex;
+  gap: 50px;
+  margin-left: 93px;
 
   li a {
-    text-decoration: none;
     color: var(--color-primary-dark);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
   li a:hover {
@@ -53,10 +105,17 @@ body {
   }
 }
 
-.header-contact-container {
+.header-contact {
+  display: flex;
+  margin-left: auto;
+  gap: 40px;
+
   a {
-    text-decoration: none;
     color: var(--color-minor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
   a:hover {
@@ -66,16 +125,23 @@ body {
 
 /* index.html */
 
-.main-header-container {
+.main-header {
   background-color: var(--color-background-dark);
+  height: 600px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .main-header-title {
+  margin: auto;
+  max-width: 696px;
   color: var(--color-primary-light);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.35;
   letter-spacing: 0.06em;
+  text-align: center;
 }
 
 .main-header-request-button {
@@ -88,83 +154,141 @@ body {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.06em;
+  text-align: center;
+  padding: 10px 24px;
+  margin-top: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.main-features-container {
-  letter-spacing: 0.03em;
+.main-header-request-button:hover {
+  background: var(--color-emphasis-minor);
+}
 
-  ul li h3 {
+.main-features-ul {
+  gap: 30px;
+  display: flex;
+
+  li {
+    max-width: 270px;
+  }
+
+  li h3 {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
   }
 
-  ul li p {
+  li p {
     color: var(--color-minor);
     font-size: 14px;
     line-height: 1.7;
-  }
-}
-
-.main-work-container {
-  h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
     letter-spacing: 0.03em;
   }
 }
 
-.main-team-container {
+.main-work-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main-work-ul {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.main-team {
   background-color: var(--color-background-light);
   letter-spacing: 0.03em;
+}
 
-  h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
+.main-team-title {
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main-team-ul {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+
+  li {
+    border-radius: 0px 0px 4px 4px;
+    background: var(--color-primary-light);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   }
 
-  ul li h3 {
+  li img {
+    margin-bottom: 30px;
+  }
+
+  li h3 {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
-  ul li p {
+  li p {
     color: var(--color-minor);
     font-size: 16px;
     line-height: 1.2;
+    text-align: center;
+    padding-bottom: 30px;
   }
 }
 
 /* portfolio.html */
 
-.main-filters-container {
-  li {
-    list-style-type: none;
-  }
+.main-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 47px;
 
   li button {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.6;
     border: none;
+    border-radius: 4px;
     background-color: var(--color-background-light);
     color: var(--color-primary-dark);
     font-weight: 500;
     letter-spacing: 0.03em;
+    padding: 6px 22px;
+    text-align: center;
   }
 
   li button:hover {
     background-color: var(--color-emphasis);
     color: var(--color-primary-light);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 3px 1px 0px rgba(0, 0, 0, 0.08);
   }
 }
 
-.main-projects-container {
+.main-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
   li {
-    list-style-type: none;
+    border: 1px solid #EEE;
+    background: var(--white);
+    max-width: 370px;
   }
 
   li div h3 {
@@ -172,6 +296,9 @@ body {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-left: 5px;
   }
 
   li div p {
@@ -179,6 +306,9 @@ body {
     line-height: 1.85;
     color: var(--color-minor);
     letter-spacing: 0.03em;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left: 5px;
   }
 }
 
@@ -186,6 +316,7 @@ body {
 
 .footer .logotype {
   color: var(--color-primary-light);
+  margin-bottom: 28px;
 }
 
 .footer {
@@ -193,13 +324,21 @@ body {
   background-color: var(--color-background-dark);
 }
 
-.footer-address-container {
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-address {
   font-style: normal;
+  margin-top: 28px;
 
   p {
     font-size: 14px;
     color: var(--color-primary-light);
     letter-spacing: 0.03em;
+    line-height: 1.14;
+    margin-bottom: 12px;
   }
 
   a {
