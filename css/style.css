@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
-@import "/node_modules/modern-normalize/modern-normalize.css";
 
 :root {
   --color-primary-dark: #212121;
@@ -123,6 +122,8 @@ a {
 .header-contact a {
   display: flex;
   height: 16px;
+  color: var(--color-minor);
+  fill: currentColor;
 }
 
 .header-contact a:hover {
@@ -146,7 +147,6 @@ a {
 .header-contact a svg {
   align-self: center;
   margin-right: 10px;
-  
 }
 
 /* index.html */
@@ -273,8 +273,8 @@ a {
   }
 
   li div {
-    margin-bottom: 16px;
     margin-top: 30px;
+    padding-bottom: 30px;
   }
 
   li div h3 {
@@ -290,23 +290,23 @@ a {
     font-size: 16px;
     line-height: 1.2;
     text-align: center;
+    margin-bottom: 16px;
   }
 
-  li ul {
+  li div ul {
     display: flex;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding-bottom: 30px;
   }
 
-  li ul li {
+  li div ul li {
     width: 44px;
     height: 44px;
     box-shadow: none;
   }
 
-  li ul li a {
+  li div ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -316,7 +316,7 @@ a {
     fill: var(--color-primary-icon);
   }
 
-  li ul li a:hover{
+  li div ul li a:hover{
     fill: var(--color-primary-light);
     background-color: var(--color-emphasis);
   }
@@ -462,6 +462,10 @@ a {
     line-height: 1.15;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
+  }
+
+  a:last-child {
+    margin-bottom: 0;
   }
 }
 
