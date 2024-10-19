@@ -13,7 +13,7 @@
         <a href="./index.html" class="logotype"> <span>Web</span>Studio </a>
         <nav>
           <ul class="header-nav-ul">
-            <li><a href="./index.html">Студія</a></li>
+            <li><a href="./index.html" class="active">Студія</a></li>
             <li><a href="./portfolio.html">Портфоліо</a></li>
             <li><a href="/">Контакти</a></li>
           </ul>
@@ -34,13 +34,18 @@
         </div>
       </div>
     </header>
+
     <main>
       <section class="main-header section">
         <div class="container">
           <h1 class="main-header-title">
             ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ
           </h1>
-          <button class="main-header-request-button" type="button">
+          <button
+            class="main-header-request-button"
+            type="button"
+            data-modal-open
+          >
             Замовити послугу
           </button>
         </div>
@@ -111,6 +116,9 @@
                 width="370"
                 height="294"
               />
+              <div>
+                <p>Десктопні додатки</p>
+              </div>
             </li>
             <li>
               <img
@@ -119,6 +127,9 @@
                 width="370"
                 height="294"
               />
+              <div>
+                <p>Мобільні додатки</p>
+              </div>
             </li>
             <li>
               <img
@@ -127,6 +138,9 @@
                 width="370"
                 height="294"
               />
+              <div>
+                <p>Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -358,6 +372,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-left-side">
@@ -403,5 +418,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close>
+          <svg>
+            <use href="./images/svg/icons.svg#icon-close" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
