@@ -1,0 +1,21 @@
+@import
+    './utils/fonts',
+    './utils/variables';
+
+@import
+    './base/global',
+    './base/global-classes';
+
+@import 
+    './components/header',
+    './components/footer';
+
+@import
+    './components/index/hero',
+    './components/index/features',
+    './components/index/work',
+    './components/index/team',
+    './components/index/clients';
+
+@import 
+    './style.scss';

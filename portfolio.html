@@ -3,33 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/modern-normalize.css" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <link rel="stylesheet" href="dist/css/modern-normalize.min.css" />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <a href="./index.html" class="logotype"> <span>Web</span>Studio </a>
-        <nav>
-          <ul class="header-nav-ul">
-            <li><a href="./index.html">Студія</a></li>
-            <li><a href="./portfolio.html" class="active">Портфоліо</a></li>
-            <li><a href="/">Контакти</a></li>
+      <div class="header__wrapper container">
+        <a class="header__logo logotype" href="./index.html">
+          <span>Web</span>Studio
+        </a>
+        <nav class="header__list-wrapper">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link" href="./index.html">Студія</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link active" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="/">Контакти</a>
+            </li>
           </ul>
         </nav>
-        <div class="header-contact">
-          <a href="mailto:info@devstudio.com">
-            <svg class="icon" width="16" height="12">
+        <div class="header__contact">
+          <a class="header__contact-link" href="mailto:info@devstudio.com">
+            <svg class="header__contact-icon" width="16" height="12" fill="currentColor">
               <use href="./images/svg/icons.svg#icon-envelope"></use>
             </svg>
-            <p>info@devstudio.com</p>
+            <p class="header__contact-text">info@devstudio.com</p>
           </a>
-          <a href="tel:+380961111111">
-            <svg class="icon" width="10" height="16">
+          <a class="header__contact-link" href="tel:+380961111111">
+            <svg class="header__contact-icon" width="10" height="16" fill="currentColor">
               <use href="./images/svg/icons.svg#icon-smartphone"></use>
             </svg>
-            <p>+38 096 111 11 11</p>
+            <p class="header__contact-text">+38 096 111 11 11</p>
           </a>
         </div>
       </div>
