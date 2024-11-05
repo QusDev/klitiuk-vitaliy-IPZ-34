@@ -11,19 +11,18 @@ const concat = require("gulp-concat");
 const paths = {
   styles: {
     src: {
-      scss: "./sass/**/*.scss",
-      css: "./css/**/*.css",
+      scss: "./style/sass/**/*.scss",
+      css: "./style/css/**/*.css",
     },
-    dest: "./dist/css",
+    dest: "./css",
   },
-  dist: "./dist/",
 };
 
-function cleanDist(done) {
-  if (fs.existsSync(paths.dist) == false) {
+function cleanCss(done) {
+  if (fs.existsSync(paths.styles.dest) == false) {
     return done();
   }
-  return gulp.src(paths.dist, { read: false }).pipe(clean());
+  return gulp.src(paths.styles.dest, { read: false }).pipe(clean());
 }
 
 function scss() {
@@ -70,7 +69,7 @@ function watch() {
 }
 
 const build = gulp.series(
-  cleanDist,
+  cleanCss,
   gulp.parallel(scss, css),
   watch
 );
