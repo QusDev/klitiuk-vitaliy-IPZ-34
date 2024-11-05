@@ -8,7 +8,8 @@
 
 @import 
     './components/header',
-    './components/footer';
+    './components/footer',
+    './components/feedback-modal';
 
 @import
     './components/index/hero',
@@ -19,6 +20,3 @@
 
 @import 
     './components/portfolio/projects';
-
-@import 
-    './style.scss';
