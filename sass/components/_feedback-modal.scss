@@ -120,10 +120,10 @@
             border-radius: 4px;
             border: 1px #21212133 solid;
             padding: 11px 0px 11px 42px;
-            transition: outline-color 300ms ease-in-out;
+            transition: border-color 300ms ease-in-out;
 
             &:hover {
-                outline: 1px var(--color-emphasis) solid;
+                border-color: var(--color-emphasis);
             }   
         }
     }
@@ -132,11 +132,13 @@
         color: var(--color-emphasis);
     }
 
+    
     &__label {
         font-size: 12px;
         color: var(--color-minor);
         line-height: 1.17;
         letter-spacing: 0.01em;
+        margin-bottom: 4px;
     }
 
     &__textarea {
@@ -144,6 +146,7 @@
             margin-bottom: 20px;
         }
 
+        margin-top: 4px;
         height: 120px;
         width: 100%;
         border-radius: 4px;
@@ -153,11 +156,11 @@
         letter-spacing: 0.01em;
         padding: 11px 12px;
         resize: none;
-        transition: outline-color 300ms ease-in-out;
+        transition: border-color 300ms ease-in-out;
 
         &:hover,
         &:focus {
-            outline: 1px var(--color-emphasis) solid;
+            border-color: var(--color-emphasis);
         }
     }
 

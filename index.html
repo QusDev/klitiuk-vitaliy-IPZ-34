@@ -630,10 +630,12 @@
         <div class="footer__mailing">
           <h3 class="footer__mailing-title">Підпишіться на розсилку</h3>
           <form class="footer__mailing-form" action="">
+            <label class="visually-hidden" for="footer-mailing-input"></label>
             <input
               class="footer__mailing-input"
               type="text"
               placeholder="E-mail"
+              id="footer-mailing-input"
             />
             <button class="footer__mailing-button" type="submit">
               Підписатися
@@ -667,8 +669,14 @@
         </h2>
         <form class="feedback-modal__form modal-form">
           <div class="feedback-modal__input-wrapper">
-            <label class="feedback-modal__label">Ім'я</label>
-            <input class="feedback-modal__input" type="text" />
+            <label class="feedback-modal__label" for="feedback-name"
+              >Ім'я</label
+            >
+            <input
+              class="feedback-modal__input"
+              type="text"
+              id="feedback-name"
+            />
             <svg
               class="feedback-modal__icon"
               fill="currentColor"
@@ -679,8 +687,14 @@
             </svg>
           </div>
           <div class="feedback-modal__input-wrapper">
-            <label class="feedback-modal__label">Телефон</label>
-            <input class="feedback-modal__input" type="text" />
+            <label class="feedback-modal__label" for="feedback-phone"
+              >Телефон</label
+            >
+            <input
+              class="feedback-modal__input"
+              type="text"
+              id="feedback-phone"
+            />
             <svg
               class="feedback-modal__icon"
               fill="currentColor"
@@ -691,8 +705,14 @@
             </svg>
           </div>
           <div class="feedback-modal__input-wrapper">
-            <label class="feedback-modal__label">Пошта</label>
-            <input class="feedback-modal__input" type="text" />
+            <label class="feedback-modal__label" for="feedback-mail"
+              >Пошта</label
+            >
+            <input
+              class="feedback-modal__input"
+              type="text"
+              id="feedback-mail"
+            />
             <svg
               class="feedback-modal__icon"
               fill="currentColor"
@@ -703,15 +723,18 @@
             </svg>
           </div>
           <div class="feedback-modal__textarea-wrapper">
-            <label class="feedback-modal__label">Коментар</label>
+            <label class="feedback-modal__label" for="feedback-comment"
+              >Коментар</label
+            >
             <textarea
               class="feedback-modal__textarea"
               placeholder="Введіть текст"
+              id="feedback-comment"
             ></textarea>
           </div>
           <div class="feedback-modal__checkbox-wrapper">
-            <input class="feedback-modal__checkbox" type="checkbox" />
-            <label class="feedback-modal__checkbox-label">
+            <input class="feedback-modal__checkbox" type="checkbox" id="feedback-policy"/>
+            <label class="feedback-modal__checkbox-label" for="feedback-policy">
               Погоджуюся з росилкою та приймайю
               <a class="feedback-modal__checkbox-link" href="#"
                 >Умови договору</a
