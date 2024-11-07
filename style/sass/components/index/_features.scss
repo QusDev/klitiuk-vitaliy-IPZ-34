@@ -1,0 +1,35 @@
+.features {
+    &__list {
+        gap: 30px;
+        display: flex;
+    }
+
+    &__item {
+        max-width: 270px;
+
+        &-wrapper {
+            padding: 25px 100px;
+            margin-bottom: 30px;
+            background-color: var(--color-background-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+            margin-bottom: 10px;
+        }
+
+        &-description {
+            color: var(--color-minor);
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 0.03em;
+        }
+    }
+}
