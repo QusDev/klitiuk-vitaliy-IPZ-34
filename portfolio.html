@@ -19,9 +19,7 @@
               <a class="header__link" href="./index.html">Студія</a>
             </li>
             <li class="header__item">
-              <a class="header__link active" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="header__link active" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="header__item">
               <a class="header__link" href="/">Контакти</a>
@@ -51,6 +49,72 @@
             </svg>
             <p class="header__contact-text">+38 096 111 11 11</p>
           </a>
+        </div>
+        <button
+          class="header__mobile-button"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+        >
+          <svg class="header__mobile-button-icon" width="40" height="40">
+            <use
+              class="header__mobile-button--close"
+              href="./images/svg/icons.svg#icon-burger-close"
+            ></use>
+            <use
+              class="header__mobile-button--open"
+              href="./images/svg/icons.svg#icon-burger-open"
+            ></use>
+          </svg>
+        </button>
+        <div class="header__mobile" data-menu>
+          <nav class="header__mobile-nav">
+            <ul class="header__mobile-nav-list">
+              <li class="header__mobile-nav-item">
+                <a href="./index.html" class="header__mobile-nav-link"
+                  >Студія</a
+                >
+              </li>
+              <li class="header__mobile-nav-item">
+                <a href="./portfolio.html" class="header__mobile-nav-link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="header__mobile-nav-item">
+                <a href="" class="header__mobile-nav-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__mobile-contacts-list">
+            <li class="header__mobile-contacts-item">
+              <a
+                class="header__mobile-contacts-link link mobile-contacts-link--blue"
+                href="tel:+380961111111"
+                >+380961111111</a
+              >
+            </li>
+            <li class="header__mobile-contacts-item">
+              <a
+                class="header__mobile-contacts-link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="header__mobile-social-list">
+            <li class="header__mobile-social-item">
+              <a class="header__mobile-social-link" href="">Instagram</a>
+            </li>
+            <li class="header__mobile-social-item">
+              <a class="header__mobile-social-link" href="">Twitter</a>
+            </li>
+            <li class="header__mobile-social-item">
+              <a class="header__mobile-social-link" href="">Facebook</a>
+            </li>
+            <li class="header__mobile-social-item">
+              <a class="header__mobile-social-link" href="">LinkedIn</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -414,5 +478,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/header-mobile.js"></script>
   </body>
 </html>
