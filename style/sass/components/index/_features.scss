@@ -2,10 +2,28 @@
     &__list {
         gap: 30px;
         display: flex;
+
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__item {
         max-width: 270px;
+
+        @include tablet {
+            max-width: 354px;
+            min-width: 290px;
+        }
+
+        @include mobile {
+            max-width: none;
+        }
 
         &-wrapper {
             padding: 25px 100px;
@@ -23,6 +41,10 @@
             line-height: 1.2;
             letter-spacing: 0.03em;
             margin-bottom: 10px;
+
+            @include mobile {
+                text-align: center;
+            }
         }
 
         &-description {

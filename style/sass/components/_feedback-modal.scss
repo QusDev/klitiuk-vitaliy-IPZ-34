@@ -32,6 +32,13 @@
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         padding: 40px;
+
+        @include tablet {
+            min-width: 450px;
+          }
+          @include mobile{
+            min-width: 92.5%;
+          }
     }
 
     &__title {
@@ -121,6 +128,7 @@
             border: 1px #21212133 solid;
             padding: 11px 0px 11px 42px;
             transition: border-color 300ms ease-in-out;
+            outline: none;
 
             &:hover {
                 border-color: var(--color-emphasis);
@@ -157,6 +165,7 @@
         padding: 11px 12px;
         resize: none;
         transition: border-color 300ms ease-in-out;
+        outline: none;
 
         &:hover,
         &:focus {
@@ -171,7 +180,6 @@
             justify-content: space-around;
             align-items: center;
             margin-bottom: 30px;
-            margin: 0 13px 30px 12px;
         }
 
         appearance: none;
@@ -200,6 +208,11 @@
             font-size: 14px;
             line-height: 1.7;
             letter-spacing: 0.03em;
+            color: var(--color-minor);
+
+            @include mobile {
+                font-size: 12px;
+            }
         }
 
         &-link {

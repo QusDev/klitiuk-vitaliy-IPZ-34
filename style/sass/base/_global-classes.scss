@@ -9,6 +9,16 @@
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .logotype {
@@ -35,4 +45,8 @@
     clip-path: inset(100%) !important;
     clip: rect(0 0 0 0) !important;
     overflow: hidden !important;
+}
+
+.no-scroll {
+    overflow: hidden;
 }

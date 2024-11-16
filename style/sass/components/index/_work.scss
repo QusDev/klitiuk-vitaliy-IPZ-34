@@ -1,4 +1,12 @@
 .work {
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: none;
+    }
+
     padding-top: 0;
 
     &__title {
